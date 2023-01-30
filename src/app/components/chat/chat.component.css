@@ -1,0 +1,81 @@
+.style-card{
+    width: 50em;
+    height: 40em;
+}
+
+.container-fluid{
+    position: absolute;
+}
+
+.card_position{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%,20%);
+}
+
+.position_button{
+    position: relative;
+    top: 90%;
+    left: 50%;
+}
+.style-agent{
+    color: white;
+    font-size: 2em; 
+    padding: 0.25em;   
+}
+
+.card-header{
+    background-color: rgba(10, 10, 173, 0.959);
+}
+
+.text_position{
+    position: relative;
+    left: 22.5%; 
+    margin-top: 0.5em;   
+}
+
+.circle{
+    height: 4em;
+    width: 4em;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.icon-style{   
+    height: 3em;
+    width: 3em;
+    background-color: rgb(12, 12, 148);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.icon_pos{
+    margin-top: 0.35em;
+    margin-left: 0.4em;
+    scale: 1.25;
+    color: white;
+}
+
+.user_style{
+    color: Orange;
+    background-color: lightblue;
+    float:right;
+    padding: 0.5em;
+    word-wrap: break-word;
+    width: 80%;
+}
+
+.card-body{
+    overflow-y:scroll;
+    max-height: 100em;
+}
+
+.bot_style{
+    color:white;
+    background-color: darkblue;
+    padding: 0.5em;
+    float: left;
+    width: 80%;
+}

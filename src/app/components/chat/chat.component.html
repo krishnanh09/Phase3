@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="card_position">
+        <div class="card style-card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="../../../assets/images/bot.jpg.jpg" class="circle" />
+                    </div>
+                    <div class="col-10 text_position">
+                        <h5 class="bold style-agent">Agent X</h5>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-body" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                <div *ngIf="isData">
+                    <div *ngFor="let item of chatHistory.result">
+                        <div><p *ngIf="item.isBot" class="bot_style">{{item.message}}</p></div>
+                        <div><p *ngIf="!item.isBot" class="user_style">{{item.message}}</p></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="card-footer">
+                <form [formGroup]="chatForm">
+                    <div class="row">
+                        <div class="col-11">
+                            <input type="text" class="form-control" id="text" placeholder="Type your message..."
+                                formControlName="message">
+                        </div>
+                        <div class="col-1">
+                            <span class="icon-style" (click)="onSend($event)"><mat-icon
+                                    class="icon_pos">send</mat-icon></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row position_button">
+    <div class="col-3">       
+        <button mat-raised-button color="primary" class="mx-2" (click)="selectUser($event,1)">Bot</button>
+        <button mat-raised-button color="primary" (click)="selectUser($event,2)">User</button>
+    </div>
+     
+</div>
